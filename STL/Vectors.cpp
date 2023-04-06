@@ -52,7 +52,21 @@ int main()
         int x = rand();
         w.push_back(x);
     }
-    // printVect(w);
+    vector<int>::iterator it = w.begin();
+    for (it = w.begin(); it != w.end(); ++it) // it++ -> Next iteartor ++it -> Next location
+        cout << "Iterator: " << (*it) << endl;
+    vector<pair<int, int>> vp = {{1, 2}, {2, 3}, {3, 4}};
+    vector<pair<int, int>>::iterator itp;
+    for (itp = vp.begin(); itp != vp.end(); ++itp)
+        cout << (itp->first) << " " << (*itp).second << endl; //(*itp).first <==> (it->first)
+    printVect(w);
+    for (int value : w) // range based loop , for all containers
+    {
+        value++;
+        cout << value << " ";
+    }
+    printVect(w);
+    auto a = 1;
     // cout << endl;
     // vector<int> v(4, 4);
     // v.push_back(10);
