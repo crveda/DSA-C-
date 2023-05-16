@@ -60,11 +60,14 @@ int main()
     auto it = m.find(3); // O(log(n))
     m.erase(3);          // O(log(n)) put it in if case
     // m.clear(); deletes full map
-    cout << it->second << " " << it->first << endl;
+    // cout << it->second << " " << it->first << endl;
+    cout << "HEREE\n";
+    for (auto vals : m)
+        cout << vals.first << " " << vals.second << endl;
     // map<int, string>::iterator it;
     //  for (it = m.begin(); it != m.end(); ++it)
     //      cout << it->first << " " << it->second << endl;
-    printmap(m);
+    // printmap(m);
     // unorderedMap();
     return 0;
 }
